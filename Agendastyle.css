@@ -1,0 +1,360 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+:root {
+  --base-color: #cf405c;
+  --footer-color: #242322;
+  --active-color: #fac140;
+  --base-variant: #e8e8e8;
+  --text-color: #ffffff;
+  --secondary-text: #1a263c;
+  --primary-color: #1b0366;
+  --accent-color: #16082e;
+  --secondary-color: #08152e;
+  --third-color: #08152e;
+}
+
+body {
+  background-image: url("imagenes/Fondo.png");
+  background-repeat: no-repeat;
+  background-size: cover;  
+  background-position: center; 
+  background-attachment: fixed; 
+  height: 100vh;   
+  width: 100%;  
+  cursor: url('imagenes/cursor.ico'), auto;   
+}
+
+
+#btnTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  cursor: url('imagenes/presionado.ico'), auto;
+}
+
+
+.navbar {
+  background-color: var(--base-color);
+  height: 80px;
+  margin: 20px;
+  border-radius: 16px;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.navbar.scroll-active {
+  margin: 0;
+  border-radius: 0;
+  height: 80px;
+  background-color: var(--base-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  font-weight: 500;
+  color: var(--text-color);
+  font-size: 24px;
+  transition: 0.3s color;
+  font-family: "Lobster", cursive;
+}
+
+.navbar .btn {
+  border-color: var(--active-color);
+  color: var(--active-color);
+  font-weight: 500;
+  cursor: url('imagenes/presionado.ico'), auto;
+}
+
+.navbar .btn:hover {
+  font-weight: 500;
+  font-weight: 500;
+  background-color: var(--active-color);
+  border-color: var(--active-color);
+  color: var(--base-variant);
+  cursor: url('imagenes/presionado.ico'), auto;
+}
+
+.fade-screen {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #070707;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOut 2s ease forwards;
+}
+
+.fade-screen img {
+  width: 150px;
+  height: auto;
+  opacity: 1;
+  animation: fadeOutImage 2s ease forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeOutImage {
+  to {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}
+
+.navbar-toggler {
+  border: none;
+  font-size: 1.25rem;
+
+}
+
+.navbar-toggler-icon {
+  border-color: var(--base-color);
+}
+
+
+.navbar-toggler:focus,
+.btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.nav-link {
+  color: var(--third-color);
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--text-color) !important;
+}
+
+.nav-link.active {
+  color: var(--active-color) !important;
+  font-weight: 600;
+}
+
+.offcanvas {
+  background-color: var(--base-color);
+}
+
+@media (min-width: 991px) {
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background-color: var(--active-color);
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+  }
+
+  .nav-link:hover::before,
+  .nav-link.active::before {
+    width: 100%;
+    visibility: visible;
+  }
+}
+
+.hero-section {
+  background: url("imagenes/años.jpeg") no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  width: 100%;
+  height: 700px;
+  position: relative;
+
+}
+
+.hero-section::before {
+
+  background-color: rgba(0, 0, 0, 0.466);
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+
+.hero-text {
+  padding-bottom: 40px;
+  color: white;
+}
+
+.hero-text h1 {
+  font-weight: 1000;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+/*nav y su section*/
+
+/*fiestas descripcion*/
+
+.page-section {
+  display: flex;
+  justify-content: center;
+}
+
+.content-box {
+  background-color: #fff;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 49px;      
+  justify-content: center;
+  align-items: center;
+}
+
+.divider {
+  border: none;
+  border-top: 4px solid #cf405c;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+.title {
+  text-align: center;
+  color: #cf405c;
+  font-size: 3rem;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.page-final {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  background-color: var(--footer-color);
+}
+
+/*noticias*/
+.title-noticias {
+  text-align: center;         
+  font-size: 2.5rem;         
+  font-weight: bold;          
+  text-transform: uppercase;
+  color: #cf405c;             
+  margin-top: 6rem;         
+  margin-bottom: 1rem;        
+}
+
+/* Línea decorativa */
+.divider2 {
+  border: none;
+  border-top: 7px solid #d81b40;
+  margin-bottom: 20px;
+    opacity: 0.7;
+}
+
+/*cards*/
+.custom-card {
+  border: 2px dotted #000;   
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+  display: flex;             
+  flex-direction: column;   
+  height: 100%;             
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+}
+
+.custom-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.custom-card .card-body {
+  flex: 1;   
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-card .card-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.custom-card .card-author {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.custom-card .card-author span {
+  font-weight: bold;
+  color: #000;
+}
+
+.custom-card .card-text {
+  font-size: 14px;
+  color: #444;
+  flex-grow: 2;  
+}
+
+.custom-card .card-footer {
+  background: #fff;
+  border-top: none;
+  text-align: right;
+  font-size: 13px;
+  color: #666;
+  padding-right: 10px;  
+  padding-bottom: 5px;   
+}
+
+.btn-card {
+  display: inline-block;
+  background-color: #4CAF50; 
+  color: white;
+  padding: 2px 6px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px; 
+  cursor: url('imagenes/presionado.ico'), auto;
+}
+
+.btn-card:hover {
+  background-color: #347e38;
+  color: #000;
+  cursor: url('imagenes/presionado.ico'), auto;
+}
+
+

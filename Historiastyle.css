@@ -1,0 +1,483 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+:root {
+  --base-color: #cf405c;
+  --footer-color: #242322;
+  --active-color: #fac140;
+  --base-variant: #e8e8e8;
+  --text-color: #ffffff;
+  --secondary-text: #1a263c;
+  --primary-color: #1b0366;
+  --accent-color: #16082e;
+  --secondary-color: #08152e;
+  --third-color: #08152e;
+}
+
+body {
+  background-image: url("imagenes/Fondo.png");
+  background-repeat: no-repeat;
+  background-size: cover;  
+  background-position: center; 
+  background-attachment: fixed; 
+  height: 100vh;   
+  width: 100%;    
+  cursor: url('imagenes/cursor.ico'), auto; 
+}
+
+
+#btnTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  cursor: url('imagenes/presionado.ico'), auto;
+}
+
+
+.navbar {
+  background-color: var(--base-color);
+  height: 80px;
+  margin: 20px;
+  border-radius: 16px;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.navbar.scroll-active {
+  margin: 0;
+  border-radius: 0;
+  height: 80px;
+  background-color: var(--base-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  font-weight: 500;
+  color: var(--text-color);
+  font-size: 24px;
+  transition: 0.3s color;
+  font-family: "Lobster", cursive;
+}
+
+.navbar .btn {
+  border-color: var(--active-color);
+  color: var(--active-color);
+  font-weight: 500;
+  cursor: url('imagenes/presionado.ico'), auto;
+}
+
+.navbar .btn:hover {
+  font-weight: 500;
+  font-weight: 500;
+  background-color: var(--active-color);
+  border-color: var(--active-color);
+  color: var(--base-variant);
+  cursor: url('imagenes/presionado.ico'), auto;
+}
+
+.fade-screen {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOut 2s ease forwards;
+}
+
+.fade-screen img {
+  width: 150px;
+  height: auto;
+  opacity: 1;
+  animation: fadeOutImage 2s ease forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeOutImage {
+  to {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}
+
+.navbar-toggler {
+  border: none;
+  font-size: 1.25rem;
+
+}
+
+.navbar-toggler-icon {
+  border-color: var(--base-color);
+}
+
+
+.navbar-toggler:focus,
+.btn-close:focus {
+  box-shadow: none;
+  outline: none;
+  cursor: url('imagenes/presionado.ico'), auto;
+}
+
+.nav-link {
+  color: var(--third-color);
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--text-color) !important;
+}
+
+.nav-link.active {
+  color: var(--active-color) !important;
+  font-weight: 600;
+}
+
+.offcanvas {
+  background-color: var(--base-color);
+}
+
+@media (min-width: 991px) {
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background-color: var(--active-color);
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+  }
+
+  .nav-link:hover::before,
+  .nav-link.active::before {
+    width: 100%;
+    visibility: visible;
+  }
+}
+
+.hero-section {
+  background: url("imagenes/años.jpeg") no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  width: 100%;
+  height: 700px;
+  position: relative;
+
+}
+
+.hero-section::before {
+
+  background-color: rgba(0, 0, 0, 0.466);
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+
+.hero-text {
+  padding-bottom: 40px;
+  color: white;
+}
+
+.hero-text h1 {
+  font-weight: 1000;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+/*nav y su section*/
+
+/*fiestas descripcion*/
+
+.page-section {
+  display: flex;
+  justify-content: center;
+}
+
+.content-box {
+  background-color: #fff;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 49px;      
+  justify-content: center;
+  align-items: center;
+}
+
+.divider {
+  border: none;
+  border-top: 4px solid #cf405c;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+.title {
+  text-align: center;
+  color: #cf405c;
+  font-size: 3rem;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.col.text {
+  flex: 2;
+  margin-top: 50px;
+  align-content: center;
+}
+
+.subtitle {
+  padding-left: 40px;
+  color: #f4b400;
+  font-size: 2rem;
+  margin-bottom: 18px;
+  font-weight: bold;
+  font-family:"Mozilla Headline", sans-serif;
+}
+
+.explicacion {
+  text-align: justify;
+  font-size: 1.3rem;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.col.image {
+  flex: 1;
+  margin-top: 30px;
+  margin-right: 40px;
+}
+
+.col.image img {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.562);
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 250px; /* Puedes ajustar esta altura según prefieras */
+  object-fit: cover; /* Esto recorta la imagen para llenar sin deformarla */
+  border-top-left-radius: calc(0.375rem - 1px);
+  border-top-right-radius: calc(0.375rem - 1px);
+}
+
+
+/*fiestas descripcion*/
+
+/*Cards*/
+
+.Disfraces {
+  font: size 60px;
+  padding-bottom: 25px;
+}
+
+.card {
+  height: 30rem;
+  display: flex;
+}
+
+.card-hover {
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-1 .card-body {
+  background-color: #1e623a;
+}
+
+.card-1 .card-title {
+  color: #2ec56d;
+}
+
+.card-1 .button-1 {
+  background-color: #29a55d;
+  color: rgb(226, 240, 255);
+  cursor: url('imagenes/presionado.ico'), auto;
+}
+
+.card-2 .card-body {
+  background-color: rgb(236, 173, 0);
+}
+
+.card-2 .card-title {
+  color: rgb(255, 253, 161);
+}
+
+.card-2 .button-2 {
+  color: rgb(255, 246, 231);
+  background-color: rgb(231, 141, 4);
+  cursor: url('imagenes/presionado.ico'), auto;
+}
+
+.card-3 .card-body {
+  background-color: rgb(153, 0, 38);
+}
+
+.card-3 .card-title {
+  color: rgb(247, 74, 74);
+}
+
+.card-3 .button-3 {
+  color: rgb(255, 246, 231);
+  background-color: rgb(204, 16, 57);
+  cursor: url('imagenes/presionado.ico'), auto;
+}
+
+.card-4 .card-body {
+  background-color: rgb(36,158,246);
+}
+
+.card-4 .card-title {
+  color: #063f68;
+}
+
+.card-4 .button-4 {
+  color: rgb(231, 241, 255);
+  background-color: #063f68;
+  cursor: url('imagenes/presionado.ico'), auto;
+}
+
+.card-5 .card-body {
+  background-color: #fdc837;
+}
+
+.card-5 .card-title {
+  color:rgb(231, 141, 4);
+}
+
+.card-5 .button-5 {
+  color: rgb(231, 241, 255);
+  background-color: rgb(209, 126, 1);
+  cursor: url('imagenes/presionado.ico'), auto;
+}
+
+.card-6 .card-body {
+  background-color: rgb(36,158,246);
+}
+
+.card-6 .card-title {
+  color: #063f68;
+}
+
+.card-6 .button-6 {
+  color: rgb(231, 241, 255);
+  background-color: #063f68;
+  cursor: url('imagenes/presionado.ico'), auto;
+}
+
+.modal-content {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.modal-body {
+  text-align: justify;
+}
+
+.modal-body img {
+  border-radius: 15px;
+  height: 300px;
+}
+
+/*Cards*/
+
+/*Carrusel*/
+.carrusel h2{
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  
+}
+
+.carrusel p{
+    color: #666777;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.carrusel .container-fluid{
+    height: 400;
+    background-position: 50% 50%;
+    width: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 1%;
+}
+
+.carrusel .btn{
+  border-color: #f4b400; 
+  background-color: #f4b400;
+  font-weight: 500; 
+  font-family:"Mozilla Headline", sans-serif; 
+  cursor: url('imagenes/presionado.ico'), auto; 
+}
+
+/*Carrusel*/
+
+/*Bandera*/
+.bandera {
+  display: block;      
+  margin: 0 auto;         
+  max-width: 400px;       
+  width: 100%;            
+  height: auto;           
+}
+/*Bandera*/
+
+/*footer*/
+.page-final {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  background-color: var(--footer-color);
+}
+
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Admin</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" 
+     rel="stylesheet" 
+     integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">   
+    <link rel="shortcut icon" href="Recurso 3.svg">
+     <link rel="stylesheet" href="stylesAdmin.css">
+     <script type="text/javascript" src="script2.js" defer></script>
+    <link rel= "stylesheet" href= "https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" >
+
+</head>
+<body>
+
+            <div class="container-crear">
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <h3 >Afiche publicitario</h3>
+                    <img src="placeholderImg.png" alt="" id="placeholderImg">
+                    <button id="btnMat" class="btnMaterialP  mt-3" type="button">
+                        Cargar material publicitario</button>
+                       <input type="file" accept="image/*" id="inputFile2"  style="display: none;">
+                </div>
+                <div class="col-md-7">
+                    <div class="col-descripcion">
+                    <h3 >Nombre del evento</h3>
+                    <input class="mx-auto inputChar" type="text" id="inputNombre" style=" width: 300px; height: 30px;" placeholder="Desfile de traje de baño">  
+                    <h3 >Lugar</h3>
+                    <div class="input-group">
+                          <select class="form-select" id="inputLugar">
+                            <option value="" selected disabled hidden>Elegir un lugar</option>
+                            <option value="Plaza de Toros">Plaza de Toros</option>
+                            <option value="Centro histórico">Centro histórico</option>
+                            <option value="Torre del reloj">Torre del reloj</option>
+                            <option value="Camellon de los Martines">Camellon de los Martines</option>
+                            <option value="PLaza de Canapote">PLaza de Canapote</option>
+                          </select>
+
+                        </div>
+                     <h3 >Fecha</h3>
+                     <div class="col-12 col-md">
+                        <div class="input-group">
+                          <input type="date"  id="inputFecha" class="form-control loguito">
+                        </div> </div>
+                     <h3 >Categoria</h3>
+                       <div class="input-group">
+                          <select class="form-select"  id="inputCategoria">
+                            <option value="" selected disabled>Categoría</option>
+                            <option value="Eventos gratis">Eventos gratis</option>
+                            <option value="Cultural">Cultural</option>
+                            <option value="Deportivo">Deportivo</option>
+                            <option value="Musical">Musical</option>
+                          </select>
+                        </div>
+                
+                     <h3 >Aforo</h3>
+                    <input class="mx-auto inputChar" type="text" id="inputAforo" style="width: 300px; height: 30px;" placeholder="Escribe algo...">  
+                     <h3 >Responsables</h3>
+                    <input class="mx-auto inputChar" type="text" id="inputResp" style="width: 300px; height: 30px;" placeholder="Escribe algo...">  
+
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col mt-5 col-evento">
+                <h3>Descripcion del evento</h3>
+                 <input class=" descripcion-Event text-alignt-top" type="text" id="inputDescripcion" style=" width: 500px; height: 100px;" placeholder="Escribe una descripcion...">  
+                <h3 class="mt-3">Patrocinadores</h3>
+                 <input class=" inputPatro" type="text" id="inputPatrocinadores" style="width: 300px; height: 30px;" placeholder="Patrocinadores">  
+                  <h3 class="mt-3">Artistas invitados</h3>
+                 <input class=" inputPatro" type="text" id="inputArtistas" style="width: 300px; height: 30px;" placeholder="Silvestre, El vega...">  
+                  <h3 class="mt-3">Precio</h3>
+                 <input class=" inputPatro" type="number" id="inputPrecio" style="width: 300px; height: 30px;" pattern="\d*" inputmode="numeric" placeholder="$$ miles de pesos">  
+                 
+                 <div class="row justify-content-center RowGuardar">
+                   <div class="col-auto">
+                     <button id="btnGuardar" class="btn btnMaterialP mt-3 mx-2" type="button">
+                        Guardar</button>
+                   </div>
+                        <div class="col-auto">
+                          <a
+                        id="btnCancelar"
+                     class="btn btnMaterialP mt-3 mx-2"
+                      type="button">Cancelar</a>
+                        </div>
+                 </div>
+            </div>
+           </div>
+</body>
+</html>
